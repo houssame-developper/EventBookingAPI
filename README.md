@@ -66,7 +66,6 @@ A modern, async REST API for event booking management built with **FastAPI**, **
 - **pytest-asyncio** — Async test support
 - **httpx** — Async HTTP client for API testing
 - **polyfactory** — Test data factories for Pydantic models
-- **Faker** — Fake data generation
 
 ### Containerization & DevOps
 - **Docker** — Container runtime
