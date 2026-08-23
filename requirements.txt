@@ -1,0 +1,13 @@
+fastapi[standard]
+uvicorn[standard]
+pydantic
+slowapi
+pytest-asyncio
+httpx
+polyfactory
+
+sqlmodel
+alembic
+asyncpg
+pyJWT
+pwdlib[bcrypt]
