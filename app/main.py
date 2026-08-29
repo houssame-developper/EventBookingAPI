@@ -13,12 +13,8 @@ from routes.event_routes import router as event_router
 from routes.user_routes import router as user_router
 
 
-@asynccontextmanager
-async def lifespan(app: FastAPI):
-    yield
 
-
-app = FastAPI(title="Event Booking API", lifespan=lifespan)
+app = FastAPI(title="Event Booking API")
 app.state.limiter = limiter
 app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 app.add_middleware(SlowAPIMiddleware)
@@ -45,5 +41,5 @@ app.include_router(booking_router, prefix=API_PREFIX)
 
 
 @app.get("/health")
-async def health():
+def health():
     return {"status": "ok"}
